@@ -22,15 +22,17 @@
 
 ># DATA TYPES 
 >> ### PRIMITIVE
-> boolean, char, byte, short, int, long, float, double
+>` boolean, char, byte, short, int, long, float, double`
 >
 >>### NON PRIMITIVE
->String, Array
+>`String, Array`
 >
 >>### COLLECTIONS
+>```
 >LIST `ArrayList, LinkedList`
 >SET INTERFACE `HashSet,LinkedHashSet,TreeSet`
 >MAP INTERFACE`HashMap,LinkedHashMap,TreeMap`
+>```
 
 ># BRANCHING
 >>### IF ELSE 
@@ -45,7 +47,7 @@
 >### Ternary Operator
 >`()? : ` 
 >
->Example
+>`Example`
 >```
 >  System.out.println((2==(1+1):"YES":"NO"));
 >```
@@ -68,8 +70,9 @@
 >```
 >if(condition){
 >// code 1
-	>	if(other condition){
-	>//code 2
+> if(other condition){
+>//code 2
+>}
 >}
 >
 >BETTER USE (If only code 2 to be run)
