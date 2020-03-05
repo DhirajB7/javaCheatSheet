@@ -117,3 +117,20 @@
 >break; // terminates loop
 >continue; // Skip current itr and starts with next itr
 >```
+
+>>### COLLECTIONS RELATED
+>```
+>WILL BE FILLED SOON
+>```
+
+>>### CODING CHALLENGE RELATED
+>```
+>ALGO DS decide
+>avoid o(n^2) which are hidden like split(" ")[i] 
+>Brute force implantation
+>Proper time comp of inbuilt methods
+>```
+>```
+> Do not use split(" ")[i] to iterate over a string---o(n^2)....
+> Use like "Dhiraj".String.ValueOf(charAt(i));
+> ```
