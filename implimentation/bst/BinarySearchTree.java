@@ -1,8 +1,14 @@
 package bst;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class BinarySearchTree {
 
 	Node root;
+
+	Queue<Node> qNode = new LinkedList<Node>();
 
 	// ============INSERT=======================
 
@@ -26,19 +32,76 @@ public class BinarySearchTree {
 		return root;
 	}
 
-	// =============INORDER PRINT==============
-
-	public void printAllValues() {
-		printNode(root);
+	// ====================print====================
+	public void printAllValuesInorder() {
+		printNodeInOrder(root);
 	}
 
-	private void printNode(Node node) {
+	public void printAllValuesPreOrder() {
+		printNodePreOrder(root);
+	}
+
+	public void printAllValuesPostOrder() {
+		printNodePostOrder(root);
+	}
+	
+	public void printAllValuesLevelOrder() {
+		printNodeBFS(root);
+	}
+
+	// =============INORDER PRINT==============DFS===
+	private void printNodeInOrder(Node node) {
 		if (node != null) {
-			printNode(node.left);
-			System.out.println(node.key);
-			printNode(node.right);
+			printNodeInOrder(node.left);
+			System.out.print(node.key+" ");
+			printNodeInOrder(node.right);
 		}
 
+	}
+
+	// =============PRE ORDER PRINT==============DFS===
+	private void printNodePreOrder(Node node) {
+		if (node != null) {
+			System.out.print(node.key+" ");
+			printNodePreOrder(node.left);
+			printNodePreOrder(node.right);
+		}
+
+	}
+
+	// =============post ORDER PRINT==============DFS===
+	private void printNodePostOrder(Node node) {
+		if (node != null) {
+			printNodePostOrder(node.left);
+			printNodePostOrder(node.right);
+			System.out.print(node.key+" ");
+		}
+
+	}
+
+	// ==============BFS=====================
+
+	private void printNodeBFS(Node node) {
+
+		ArrayList<Integer> al = new ArrayList<Integer>();
+		
+		if (node != null) {
+			qNode.add(node);
+		}
+		
+		while(!qNode.isEmpty()) {
+			Node value = qNode.poll();
+			al.add(value.key);
+			if(value.left!=null) {
+				qNode.add(value.left);
+			}
+			if(value.right!=null) {
+				qNode.add(value.right);
+			}
+			
+		}
+		
+		al.forEach(a->System.out.print(a+" "));
 	}
 
 	// =================SEARCH OR CONTAINS====================
@@ -96,7 +159,7 @@ public class BinarySearchTree {
 			root.key = minValue(root.right);
 
 			// Delete inorder successor
-			 root.right = deleteNode(root.right, root.key);
+			root.right = deleteNode(root.right, root.key);
 		}
 
 		return root;
@@ -117,38 +180,28 @@ public class BinarySearchTree {
 		BinarySearchTree bst = new BinarySearchTree();
 
 		// make tree
-		bst.insert(50);
-		bst.insert(30);
-		bst.insert(20);
-		bst.insert(40);
-		bst.insert(70);
-		bst.insert(60);
-		bst.insert(80);
-		bst.insert(100);
-		
-		System.out.println("TREE FORMED");
-		
-		// print
-		bst.printAllValues();
+		bst.insert(1);
+		bst.insert(2);
+		bst.insert(5);
+		bst.insert(3);
+		bst.insert(6);
+		bst.insert(4);
 
-		System.out.println("SEARCHING ");
+		System.out.println("=======IN ORDER=====");
+		bst.printAllValuesInorder();
+		System.out.println();
 		
-		// search
-		System.out.println(bst.contains(20));
-
-		System.out.println("REMOVING LEAF AND PRINTING REMAINING");
+		System.out.println("=====Pre Order====");
+		bst.printAllValuesPreOrder();
+		System.out.println();
 		
-		// remove leaf and check again
-		bst.remove(100);
-		bst.printAllValues();
-		bst.insert(100); // make tree as same as again
+		System.out.println("====Post Order=====");
+		bst.printAllValuesPostOrder();
+		System.out.println();
 		
-		System.out.println("REMOVING MIDDLE NODE AND PRINTING REMANING");
-		
-		//remove non leaf node like 30 and 70 to see changes
-		bst.remove(70);
-		bst.printAllValues();
-
+		System.out.println("====Level Order=====");
+		bst.printAllValuesLevelOrder();
+		System.out.println();
 	}
 
 }
