@@ -134,3 +134,10 @@
 > Do not use split(" ")[i] to iterate over a string---o(n^2)....
 > Use like "Dhiraj".String.ValueOf(charAt(i));
 > ```
+>```
+>Java Priority Queue is implemented using Heap Data Structures and Heap has O(log(n)) time complexity to insert and delete element.
+>Offer() and add() methods are used to insert the element in the in the priority queue java program.
+>Poll() and remove() is used to delete the element from the queue.
+>Element retrieval methods i.e. peek() and element(), that are used to retrieve elements from the head of the queue is constant time i.e. O(1).
+>contains(Object)method that is used to check if a particular element is present in the queue, have leaner time complexity i.e. O(n).
+>```
