@@ -1,10 +1,10 @@
-package week4;
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import week4.SymmetricTree.TreeNode;
+import leetcode.SymmetricTree.TreeNode;
 
 public class MAxDepth {
 	

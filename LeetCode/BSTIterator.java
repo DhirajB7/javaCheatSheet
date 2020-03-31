@@ -1,8 +1,8 @@
-package week4;
+package leetcode;
 
 import java.util.ArrayList;
 
-import week4.SymmetricTree.TreeNode;
+import leetcode.SymmetricTree.TreeNode;
 
 public class BSTIterator {
 

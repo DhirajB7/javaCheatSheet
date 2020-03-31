@@ -1,7 +1,7 @@
-package week2;
+package leetcode;
 
 import java.util.*;
-class Solution {
+class FilterByResturant {
 	
     public static List<Integer> filterRestaurants(int[][] restaurants, int veganFriendly, int maxPrice, int maxDistance) {
 

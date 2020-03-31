@@ -1,4 +1,4 @@
-package week1;
+package leetcode;
 
 import java.io.BufferedReader;
 import java.io.IOException;

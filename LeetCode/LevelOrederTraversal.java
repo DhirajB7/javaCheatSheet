@@ -1,6 +1,6 @@
-package week4;
+package leetcode;
 
-import week4.SymmetricTree.TreeNode;
+import leetcode.SymmetricTree.TreeNode;
 
 public class LevelOrederTraversal {
 	

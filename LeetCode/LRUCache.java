@@ -1,4 +1,4 @@
-package week3;
+package leetcode;
 import java.util.HashMap;
 import java.util.LinkedList;
 

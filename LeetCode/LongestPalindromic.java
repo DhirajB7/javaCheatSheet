@@ -1,4 +1,4 @@
-package week1;
+package leetcode;
 
 public class LongestPalindromic {
 	public String longestPalindrome(String s) {

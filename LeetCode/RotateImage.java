@@ -1,4 +1,4 @@
-package week6;
+package leetcode;
 
 public class RotateImage {
 

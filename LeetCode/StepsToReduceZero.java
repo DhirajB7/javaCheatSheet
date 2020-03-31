@@ -1,4 +1,4 @@
-package week3;
+package leetcode;
 
 public class StepsToReduceZero {
 	

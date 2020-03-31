@@ -1,4 +1,4 @@
-package week2;
+package leetcode;
 
 import java.util.Arrays;
 

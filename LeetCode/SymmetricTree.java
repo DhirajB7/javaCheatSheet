@@ -1,4 +1,4 @@
-package week4;
+package leetcode;
 
 public class SymmetricTree {
 

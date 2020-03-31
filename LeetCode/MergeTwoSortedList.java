@@ -1,4 +1,4 @@
-package week1;
+package leetcode;
 
 public class MergeTwoSortedList {
 	 public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
