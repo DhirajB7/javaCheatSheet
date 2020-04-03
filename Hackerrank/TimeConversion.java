@@ -1,4 +1,4 @@
-package Hackerrank;
+package hackerrank;
 
 import java.util.Scanner;
 
@@ -10,6 +10,8 @@ public class TimeConversion {
 		
 		String ip = scan.next();
 		
+		scan.close();
+		
 		String hour = ip.split(":")[0];
 		
 		String min = ip.split(":")[1];
@@ -18,13 +20,19 @@ public class TimeConversion {
 		
 		String amPm = ip.split(":")[2].substring(2);
 		
-		System.out.println(hour);
-		System.out.println(min);
-		System.out.println(sec);
-		System.out.println(amPm);
+		if(amPm.equals("PM")) {
+			if(!hour.equals("12")) {
+				hour = String.valueOf(Integer.valueOf(hour)+12);
+			}
+		}else {
+			if(hour.equals("12")) {
+				hour = "00";
+			}
+		}
 		
+		System.out.println(hour+":"+min+":"+sec);
 		
-		
+	
 	}
 
 }
