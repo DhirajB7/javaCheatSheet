@@ -140,4 +140,7 @@
 >Poll() and remove() is used to delete the element from the queue.
 >Element retrieval methods i.e. peek() and element(), that are used to retrieve elements from the head of the queue is constant time i.e. O(1).
 >contains(Object)method that is used to check if a particular element is present in the queue, have leaner time complexity i.e. O(n).
+>
+>
+>PriorityQueue<Map.Entry<String, Integer>> queue = new PriorityQueue<>((a, b)->b.getValue()-a.getValue());
 >```
